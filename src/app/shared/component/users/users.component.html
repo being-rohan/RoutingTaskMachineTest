@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group mt-4">
+            <li class="list-group-item" *ngFor="let skill of userarr" (click)="selected(skill.userid)" [ngClass]="{
+                active:skill.userid==selectid
+            }" [queryParams]="{
+                canrole:skill.userRole
+            }" [routerLink]="['/users',skill.userid]">
+                this is username {{skill.username}} and is {{skill.userid}}
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<p class="mt-4">
+    the <strong>{{useobj.username}}</strong> is with <strong>
+        {{useobj.userid}}
+    </strong>
+</p>
+<button class="btn btn-primary" [routerLink]="['/users',this.useobj.userid,'edit']"
+    [queryParamsHandling]="'preserve'">Edit User</button>
+<button class="btn btn-primary ml-3" [routerLink]="['/users',3]">go to nikhil</button>

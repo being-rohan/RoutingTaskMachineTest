@@ -1,0 +1,19 @@
+<ul class="list-group mt-4">
+    <li class="list-group-item" *ngFor="let pro of proobj"
+     (click)="selected(pro.pid)" 
+    
+    [ngClass]="{
+        active:pro.pid===selectedid
+    }" [queryParams]="{
+        canedit:pro.canRetu
+    }" [routerLink]="['/products',pro.pid]
+
+    ">
+        this is <strong>{{pro.productName}}</strong> with id {{pro.pid}} and status is <strong>{{pro.pstatus}}</strong>
+    </li>
+</ul>
+<div class="row">
+    <div class="col-md-8">
+        <router-outlet></router-outlet>
+    </div>
+</div>

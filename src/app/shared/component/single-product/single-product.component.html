@@ -1,0 +1,9 @@
+<p>
+    the <strong>{{proobj.productName}}</strong> and status is <strong>
+        {{proobj.pstatus}}
+    </strong>
+</p>
+<button class="btn btn-primary" [routerLink]="['/products',proobj.pid,'editpro']"
+[queryParamsHandling]="'preserve'"
+>EDIT pro</button>
+<button class="btn btn-primary ml-4" [routerLink]="['/products',12333]">go to vivio</button>

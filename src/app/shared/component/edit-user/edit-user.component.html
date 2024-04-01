@@ -1,0 +1,14 @@
+<div class="card mt-4">
+    <div class="card-body">
+        <form [formGroup]="userform">
+            <div class="form-group">
+                <label for="username">username</label>
+            <input type="text" placeholder="username" formControlName="username" class="form-control">
+            
+            </div>
+            <button class="btn btn-primary float-right"
+            (click)="onupdate()" 
+            >Update </button>
+        </form>
+    </div>
+</div>
